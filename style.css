@@ -1,0 +1,190 @@
+body{
+    background-image: url("./casino.jpg");
+    background-position: center;
+    background-size: cover;
+    color: white;
+    font-family: Georgia, serif;
+    font-weight: bold;
+    margin: 0;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.game{
+    color: white;
+    margin: 32px auto 0;
+    max-width: 620px;
+    padding: 24px;
+    text-shadow: 3px 3px 5px black;
+}
+
+h1{
+    color: goldenrod;
+    font-family: 'Cinzel', serif;
+    font-size: 48px;
+    margin: 0 0 18px;
+}
+
+h2{
+    color: goldenrod;
+    font-size: 24px;
+    margin: 14px 0 10px;
+}
+
+p{
+    font-size: 20px;
+    margin: 12px 0;
+}
+
+#message-el{
+    color: goldenrod;
+    font-size: 22px;
+    font-style: italic;
+    min-height: 30px;
+}
+
+.scoreboard{
+    align-items: center;
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    margin: 12px 0 18px;
+}
+
+.bet-control{
+    align-items: center;
+    display: flex;
+    font-size: 18px;
+    gap: 8px;
+}
+
+.bet-control input{
+    border: 2px solid goldenrod;
+    border-radius: 4px;
+    font: inherit;
+    font-size: 18px;
+    padding: 6px;
+    text-align: center;
+    width: 86px;
+}
+
+.hand{
+    margin-top: 16px;
+}
+
+.cards{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    min-height: 112px;
+}
+
+.card{
+    align-items: center;
+    animation: dealCard 0.3s ease-out;
+    background: white;
+    border: 2px solid #d6d6d6;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
+    color: #111;
+    display: flex;
+    flex-direction: column;
+    height: 96px;
+    justify-content: center;
+    position: relative;
+    text-shadow: none;
+    width: 68px;
+}
+
+.card.red{
+    color: #b00020;
+}
+
+.card.black{
+    color: #111;
+}
+
+.card::before,
+.card::after{
+    content: attr(data-suit);
+    font-size: 16px;
+    position: absolute;
+}
+
+.card::before{
+    left: 8px;
+    top: 6px;
+}
+
+.card::after{
+    bottom: 6px;
+    right: 8px;
+    transform: rotate(180deg);
+}
+
+.card.hidden{
+    background: linear-gradient(135deg, #083b20, #0f6b3b);
+    border-color: goldenrod;
+    color: goldenrod;
+}
+
+.card.hidden::before,
+.card.hidden::after{
+    content: "";
+}
+
+.card-face{
+    font-size: 34px;
+    line-height: 1;
+}
+
+.card-suit{
+    font-size: 24px;
+    line-height: 1;
+    margin-top: 4px;
+}
+
+.actions{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.btn{
+    background-color: goldenrod;
+    border: none;
+    border-radius: 4px;
+    color: #083b20;
+    cursor: pointer;
+    font-weight: bold;
+    min-width: 100px;
+    padding: 10px 20px;
+}
+
+.btn:hover{
+    background-color: #f4c542;
+}
+
+.btn-secondary{
+    background-color: white;
+}
+
+.hidden-ui{
+    display: none;
+}
+
+@keyframes dealCard{
+    from{
+        opacity: 0;
+        transform: translateY(-18px) scale(0.92);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blackjack</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main class="game">
+            <h1>BLACKJACK</h1>
+            <p id="message-el">Place your bet and deal.</p>
+
+            <section class="scoreboard">
+                <p id="chips-el">Chips: 100</p>
+                <label class="bet-control" for="bet-el">
+                    Bet
+                    <input id="bet-el" type="number" min="1" value="10">
+                </label>
+            </section>
+
+            <section class="hand">
+                <h2>Dealer</h2>
+                <div id="dealer-cards-el" class="cards"></div>
+                <p id="dealer-sum-el">Dealer Sum: ?</p>
+            </section>
+
+            <section class="hand">
+                <h2>Player</h2>
+                <div id="player-cards-el" class="cards"></div>
+                <p id="player-sum-el">Player Sum: 0</p>
+            </section>
+
+            <div class="actions">
+                <button id="deal-btn" class="btn" onclick="startGame()">DEAL</button>
+                <button id="hit-btn" class="btn" onclick="newCard()">HIT</button>
+                <button id="stand-btn" class="btn" onclick="stand()">STAND</button>
+                <button id="restart-btn" class="btn btn-secondary" onclick="restartGame()">RESTART</button>
+            </div>
+        </main>
+        <script src="index.js"></script>
+    </body>
+</html>
