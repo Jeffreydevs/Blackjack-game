@@ -21,3 +21,6 @@ Draw cards using the buttons
 Try to reach 21
 If you exceed 21, you lose
 Hit Blackjack to win instantly
+
+Check it out: 
+https://mybjack.netlify.app/
